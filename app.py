@@ -40,7 +40,7 @@ def calculate_bonus(player, percent_team):
     return player['bono'] * percent_final
 
 
-@app.route('/', methods=['get', 'POST'])
+@app.route('/', methods=['POST'])
 def hello_world():
     data = request.get_json()
     if data is None:
