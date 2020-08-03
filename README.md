@@ -22,8 +22,7 @@ Python >= 3.6
 
     `python app.js`
 
-2. Should be running `http://localhost:9000`
-
+2.  Should be running `http://localhost:9000`
 
 ### Production
 
@@ -33,20 +32,12 @@ For run production server, flask require a WSGI server, which is installed with 
 
 It will run at PORT=8000 by default
 
-
-
 ## Testing request
 
+Send a request with
+
 ```
-[
-   {
-      "nombre":"El Rulo",
-      "goles_minimos":10,
-      "goles":9,
-      "sueldo":30000,
-      "bono":15000,
-      "sueldo_completo": 14250,
-      "equipo":"rojo"
-   }
-]
+{
+  players: [ ...players ]
+}
 ```

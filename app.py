@@ -2,6 +2,7 @@ from flask import Flask
 from flask import request
 from flask import jsonify
 from flask_cors import CORS
+import json
 app = Flask(__name__)
 
 CORS(app)
@@ -42,7 +43,7 @@ def calculate_bonus(player, percent_team):
 
 @app.route('/', methods=['POST'])
 def hello_world():
-    data = request.get_json()
+    data = request.get_json(force=True)
     if data is None:
         return {'message': 'players is required'}, 406
     teams = {}
